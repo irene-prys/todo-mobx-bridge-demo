@@ -1,0 +1,7 @@
+<div class="todo-list" [ngClass]="{'hidden-element': isTodoEmpty}">
+	<div>{{logChangeDetection()}}</div>
+
+	<li *ngFor="let todo of todoList">
+		<input [(ngModel)]="todo.done" type="checkbox" /> {{todo.title}}
+	</li>
+</div>

@@ -1,0 +1,14 @@
+.text-filter {
+  float: left;
+}
+
+.state-filter {
+  float: right;
+  padding-left: 10px;
+}
+
+.filters-holder {
+  display: flex;
+  background: #adbad4;
+  padding: 10px 10px 10px 50px;
+}

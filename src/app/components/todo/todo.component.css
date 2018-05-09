@@ -1,0 +1,8 @@
+.todo-list {
+   background: #f8f9fd;
+   padding: 10px 15px 10px 20px;
+}
+
+.hidden-element {
+  display:none;
+}

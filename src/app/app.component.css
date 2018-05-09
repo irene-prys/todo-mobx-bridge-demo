@@ -1,0 +1,18 @@
+p {
+  font-family: Lato;
+}
+
+.todo-bottom-border {
+  background: #3b5997;
+  border-radius: 0px 0px 15px 15px;
+  height: 15px;
+}
+
+.todo-content {
+  width: 430px;
+}
+
+.section-separator-line {
+  color: #E6E6FA;
+  margin: 0px 10px 0px 10px;
+}

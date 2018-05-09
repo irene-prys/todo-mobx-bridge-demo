@@ -1,0 +1,11 @@
+<div class="filters-holder">
+	<div class="text-filter">
+		<input placeholder="Type to filter" [(ngModel)]="todoFilter.searchFilter">
+	</div>
+	<div class="state-filter">
+		<select required [(ngModel)]='todoFilter.stateFilter'>
+      <option  *ngFor='let state of todoStates' [value]="state">{{state}}</option>
+    </select>
+	</div>
+</div>
+{{logChangeDetection()}}
