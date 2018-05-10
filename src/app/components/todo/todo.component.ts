@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs/Subscription';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoComponent implements OnInit, OnDestroy {
-  private todo;
+  private todos;
   private todoStoreSubscription: Subscription;
   titleToAdd: string;
 
@@ -21,13 +21,13 @@ export class TodoComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.todoStoreSubscription = fromMobx(() => this.todoStore.todos).subscribe(todo => {
-      this.todo = todo;
+      this.todos = todo;
       this.ref.markForCheck();// run change detection for a component
     });
   }
 
   public get todoList() {
-    if (!this.todo) {
+    if (!this.todos) {
       return [];
     }
     return this.todoStore.list.filter(item => {
@@ -55,7 +55,7 @@ export class TodoComponent implements OnInit, OnDestroy {
   }
 
   public get isTodoEmpty() {
-    return !this.todo.list || this.todo.list.length === 0;
+    return this.todos.length === 0;
   }
 
   ngOnDestroy() {
